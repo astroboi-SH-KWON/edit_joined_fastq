@@ -1,8 +1,8 @@
 import time
 import os
-from Bio import SeqIO
+# from Bio import SeqIO
 import multiprocessing as mp
-import numpy as np
+# import numpy as np
 import platform
 
 import Util
@@ -43,10 +43,6 @@ os.makedirs(WORK_DIR + OU, exist_ok=True)
 TOTAL_CPU = mp.cpu_count()
 MULTI_CNT = int(TOTAL_CPU*0.8)
 #################### en env ####################
-
-
-def get_NGS_read_by_1500x1500_cell_id():
-    pass
 
 
 def split_FASTQ_by_1500x1500_cell_id():
@@ -257,5 +253,4 @@ if __name__ == '__main__':
     # test()
     # split_FASTQ_by_1500x1500_cell_id()
     # add_given_seq_befr_trgt_fastq()
-    get_NGS_read_by_1500x1500_cell_id()
     print("::::::::::: %.2f seconds ::::::::::::::" % (time.perf_counter() - start_time))

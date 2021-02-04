@@ -44,7 +44,7 @@ class ToolUtils:
 
     def read_tsv_ignore_N_line(self, path, n_line=1, deli_str="\t"):
         result_list = []
-        with open(path, "r") as f:
+        with open(path, "r", encoding='UTF8') as f:
             for ignr_line in range(n_line):
                 header = f.readline()
                 print(header)
